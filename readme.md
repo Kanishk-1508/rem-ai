@@ -61,3 +61,11 @@ The system uses a Retrieval-Augmented Generation (RAG) pipeline to ensure answer
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload
+
+**## 📸 Screenshots
+
+### Upload Interface
+![Upload UI](assets/ui.png)
+
+### Chat Interface
+![Chat UI](assets/chat.png)
