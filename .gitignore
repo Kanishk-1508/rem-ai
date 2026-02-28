@@ -1,0 +1,33 @@
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+backend/venv/
+.venv/
+env/
+
+# ========================
+# Runtime / Generated Files
+# ========================
+backend/faiss_index.bin
+backend/faiss_metadata.pkl
+backend/uploads/
+
+# ========================
+# Node / Frontend
+# ========================
+node_modules/
+frontend/node_modules/
+dist/
+
+# ========================
+# Misc
+# ========================
+.env
+.DS_Store
