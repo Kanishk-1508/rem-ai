@@ -44,8 +44,20 @@ class VectorStore:
         distances, indices = self.index.search(query_vector, top_k)
 
         results = []
+        seen_indices = set()
 
         for score, idx in zip(distances[0], indices[0]):
+            if idx < 0:
+                continue
+
+            if idx >= len(self.metadata):
+                continue
+
+            if idx in seen_indices:
+                continue
+
+            seen_indices.add(idx)
+
             if idx < len(self.metadata):
                 chunk_data = self.metadata[idx].copy()
                 chunk_data["score"] = float(score)
